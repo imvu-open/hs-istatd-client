@@ -10,7 +10,6 @@ module Imvu.Network.IstatdClient.Types
 
 import Control.DeepSeq (NFData)
 import Data.Hashable (Hashable)
-import Data.Semigroup (Semigroup ((<>), sconcat))
 import Data.String (IsString (fromString))
 import Data.Word (Word8)
 import GHC.Generics (Generic)
