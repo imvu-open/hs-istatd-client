@@ -18,10 +18,9 @@ module Imvu.Network.IstatdClient
     ) where
 
 import Control.Monad.IO.Class (MonadIO, liftIO)
-import Data.ByteString.Lazy.Builder (Builder, byteString, char7,
-                                     toLazyByteString)
+import Data.ByteString.Builder (Builder, byteString, char7,
+                                toLazyByteString)
 import Data.List.Split (chunksOf)
-import Data.Monoid ((<>))
 
 import Imvu.Network.IstatdClient.Types (Name, Packet (..), PacketType (..),
                                         bytesFromName, nameFromBytes)

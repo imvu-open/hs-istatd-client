@@ -1,7 +1,7 @@
 {-# LANGUAGE OverloadedStrings, QuasiQuotes, TemplateHaskell #-}
 module ProtocolEncodeTest where
 
-import Data.ByteString.Lazy.Builder (toLazyByteString)
+import Data.ByteString.Builder (toLazyByteString)
 import Test.Tasty
 import Test.Tasty.HUnit
 import Test.Tasty.TH

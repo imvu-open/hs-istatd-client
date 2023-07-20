@@ -22,6 +22,7 @@ library
     , double-conversion
     , hashable
     , network
+    , network-bsd
     , semigroups
     , split
     , transformers
@@ -49,6 +50,8 @@ test-suite alltests
 
   other-modules:
     ProtocolEncodeTest
+    Imvu.Network.IstatdClient
+    Imvu.Network.IstatdClient.Types
 
   build-depends:
       base >=4.6
