@@ -25,17 +25,7 @@ library
     , semigroups
     , split
     , transformers
-
-  -- NOTE: missing-symbol-workaround
-  -- the version constraint is a silly workaround for a problem when
-  -- attempting to use double-conversion 2.0.1.0 on GHC 7.6.3;
-  -- the generated object file is missing a non-weak definition for two symbols:
-  -- Loading package double-conversion-2.0.1.0 ... linking ... <interactive>: /home/cit/.cabal/lib/x86_64-linux-ghc-7.6.3/double-conversion-2.0.1.0/HSdouble-conversion-2.0.1.0.o: unknown symbol `_ZNK17double_conversion23StringToDoubleConverter12StringToIeeeIPKcEEdT_ibPi'
-  -- cit@linp-sandbox ~/imvu/hs-imvu-modules/hs-imvu-circuit-breaker-monitor$ nm /home/cit/.cabal/lib/x86_64-linux-ghc-7.6.3/double-conversion-2.0.1.0/HSdouble-conversion-2.0.1.0.o | grep '\bW\b'
-  -- 0000000000000000 W _ZNK17double_conversion23StringToDoubleConverter12StringToIeeeIPKcEEdT_ibPi
-  -- 0000000000000000 W _ZNK17double_conversion23StringToDoubleConverter12StringToIeeeIPKtEEdT_ibPi
     , double-conversion
-    -- == 0.2.0.6
 
   default-language:    Haskell2010
 
@@ -48,6 +38,8 @@ test-suite alltests
   type: exitcode-stdio-1.0
   hs-source-dirs: tests .
   main-is: alltests.hs
+
+  default-language:    Haskell2010
 
   ghc-options: -Wall
   ghc-options: -Werror
@@ -64,13 +56,11 @@ test-suite alltests
     , deepseq
     , hashable
     , network
+    , network-bsd
     , semigroups
     , split
     , transformers
     , tasty
     , tasty-hunit
     , tasty-th
-
-  -- see NOTE: missing-symbol-workaround
     , double-conversion
-    -- == 0.2.0.6
